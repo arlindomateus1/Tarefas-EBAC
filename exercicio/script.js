@@ -144,6 +144,22 @@ function validaEmail(elemento){
 
 }
 
+function validaUf(elemento){
+    elemento.addEventListener('focusout', function(event) {
+        event.preventDefault();
+        const ufValido = /^[A-Z]{2}$/i;
+        if(this.value.match(ufValido)) {
+            document.querySelector('.mensagem').innerHTML = "";
+            this.classList.remove('erro');
+            this.parentNode.classList.remove('erro');
+        } else {
+            document.querySelector('.mensagem').innerHTML = "verifique o preenchimento dos campos em destaque";
+            this.classList.add('erro');
+            this.parentNode.classList.add('erro');
+        }
+    });
+}
+
 
 let camposObrigatorios = document.querySelectorAll('input.obrigatorio');
 let camposNumericos = document.querySelectorAll('input.numero');
