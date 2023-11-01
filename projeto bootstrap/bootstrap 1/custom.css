@@ -1,0 +1,30 @@
+body{
+    background-color: #ff9999;
+}
+
+section {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+}
+
+input,
+textarea {
+    margin-bottom: 1rem;
+}
+
+.card {
+    width: 32%;
+    float: left;
+    margin: 5px;
+}
+
+#logo{
+    width: 100px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+#img-card{
+    width: 500px;
+    height: 400px;
+}
